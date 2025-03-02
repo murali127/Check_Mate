@@ -1,0 +1,36 @@
+# Ignore .streamlit/secrets.toml
+.streamlit/secrets.toml
+
+# Ignore .env file
+.env
+
+# Ignore Python cache files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Ignore virtual environments
+venv/
+env/
+.venv/
+
+# Ignore IDE-specific files
+.vscode/
+.idea/
+
+# Ignore macOS system files
+.DS_Store
+
+# Ignore Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Ignore log files
+*.log
+
+# Ignore output images (if applicable)
+output_images/
+
+# Ignore other sensitive files
+*.key
+*.pem
+*.cert
