@@ -120,7 +120,7 @@ with col1:
             <div class="icon"><i class="fas fa-file-invoice"></i></div>
             <h3>Cheque Processing</h3>
             <p>
-                - Upload cheque images or PDFs.<br>
+                - Upload cheque PDFs.<br>
                 - Automatically detect and extract cheque details.<br>
                 - Save extracted data to the database.
             </p>
