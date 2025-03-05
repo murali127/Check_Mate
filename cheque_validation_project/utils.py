@@ -51,7 +51,7 @@ def process_and_crop_cheque(uploaded_image):
 
         with NamedTemporaryFile(suffix='.jpg', delete=False) as temp_file:
             uploaded_image.save(temp_file.name)
-            output_path = os.path.join("output_images", "processed_cheque.jpg")
+            output_path = os.path.join("output_images", f"processed_{os.path.basename(temp_file.name)}")
 
             if border_processor.process_image(temp_file.name, output_path):
                 processed_image = cv2.imread(output_path)
@@ -62,6 +62,18 @@ def process_and_crop_cheque(uploaded_image):
     except Exception as e:
         logging.warning(f"Border detection failed: {str(e)}")
         return uploaded_image
+
+def process_pdf(uploaded_file):
+    """Process each page of the uploaded PDF and return processed images."""
+    images = convert_from_path(uploaded_file)
+    processed_images = []
+
+    for i, image in enumerate(images):
+        processed_image = process_and_crop_cheque(image)
+        processed_images.append(processed_image)
+        processed_image.save(os.path.join("output_images", f"processed_page_{i + 1}.jpg"))
+
+    return processed_images
 
 # Text processing functions
 def extract_cheque_info(text):
