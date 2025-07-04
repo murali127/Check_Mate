@@ -8,3 +8,7 @@ plotly==6.2.0
 opencv-python-headless==4.11.0.86
 pillow==11.3.0
 numpy==2.3.1
+markdown-it-py==3.0.0
+mdurl==0.1.2
+pygments==2.19.2
+rich==14.0.0
