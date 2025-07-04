@@ -25,7 +25,7 @@ env/
 .ipynb_checkpoints/
 
 # Ignore log files
-*.log
+
 
 # Ignore output images (if applicable)
 output_images/
