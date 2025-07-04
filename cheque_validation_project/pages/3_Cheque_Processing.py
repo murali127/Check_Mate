@@ -24,7 +24,7 @@ if uploaded_file:
     if uploaded_file.type == "application/pdf":
         with NamedTemporaryFile(delete=False, suffix='.pdf') as temp_file:
             temp_file.write(uploaded_file.read())
-            processed_images = process_pdf(temp_file.name)
+            processed_images = process_pdf(temp_file.name)  # Line 27
     else:
         original_image = Image.open(uploaded_file).convert("RGB")
         processed_images = [process_and_crop_cheque(original_image)]

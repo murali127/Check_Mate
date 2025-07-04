@@ -65,14 +65,12 @@ def process_and_crop_cheque(uploaded_image):
 
 def process_pdf(uploaded_file):
     """Process each page of the uploaded PDF and return processed images."""
-    images = convert_from_path(uploaded_file)
+    images = convert_from_path(uploaded_file)  # Line 68
     processed_images = []
-
     for i, image in enumerate(images):
         processed_image = process_and_crop_cheque(image)
         processed_images.append(processed_image)
         processed_image.save(os.path.join("output_images", f"processed_page_{i + 1}.jpg"))
-
     return processed_images
 
 # Text processing functions
