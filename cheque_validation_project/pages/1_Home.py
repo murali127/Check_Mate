@@ -166,4 +166,4 @@ st.markdown('<div class="divider"></div>', unsafe_allow_html=True)
 st.markdown('<div class="title">Ready to get started?</div>', unsafe_allow_html=True)
 
 if st.button("Go to Cheque Processing"):
-    st.switch_page("pages/3_🧾_Cheque_Processing.py")
+    st.switch_page("pages/3_Cheque_Processing.py")

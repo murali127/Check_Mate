@@ -17,10 +17,10 @@ page = st.sidebar.radio("Go to", ["🏠 Home", "📊 Dashboard", "🧾 Cheque Pr
 
 # Redirect to the selected page
 if page == "🏠 Home":
-    st.switch_page("pages/1_🏠_Home.py")
+    st.switch_page("pages/1_Home.py")
 elif page == "📊 Dashboard":
-    st.switch_page("pages/2_📊_Dashboard.py")
+    st.switch_page("pages/2_Dashboard.py")
 elif page == "🧾 Cheque Processing":
-    st.switch_page("pages/3_🧾_Cheque_Processing.py")
+    st.switch_page("pages/3_Cheque_Processing.py")
 elif page == "📈 Analytics":
-    st.switch_page("pages/4_📈_Analytics.py")
+    st.switch_page("pages/4_Analytics.py")
